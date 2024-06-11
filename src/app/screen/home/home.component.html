@@ -1,0 +1,64 @@
+<h2>Welcome</h2>
+<h3>Labtv</h3>
+<div id="intro">
+    <p>L'unico luogo in cui potrai ritrovare tutti i piu' famosi titoli di film e serie televisive dagli anni '60 fino agli anni 1999, l'inizio del nuovo millennio!</p>
+    <div>
+        <p>Contenuti esclusivi -</p>
+        <p>Piu' di 10.000 titoli -</p>
+        <p>Risoluzione 4K</p>
+    </div>
+</div>
+<div id="settings">
+    <ul id="new-releases">
+        <li>100:</li>
+        <li
+            (click)="changeDetails(lastArrived, 1)"
+            [ngClass]="{'activeDetail': activeButton === 1}">
+            Ultimi arrivi
+        </li>
+    </ul>
+    <ul>
+        <li [ngClass]="{'activeNumDetail': activeButton === 2}">200:</li>
+        <li
+            (click)="changeDetails(subtitles, 2)"
+            [ngClass]="{'activeDetail': activeButton === 2}">Lingua</li>
+    </ul>
+    <ul>
+        <li [ngClass]="{'activeNumDetail': activeButton === 3}">300:</li>
+        <li
+            (click)="changeDetails(faq, 3)"
+            [ngClass]="{'activeDetail': activeButton === 3}">Faq</li>
+    </ul>
+    <ul>
+        <li [ngClass]="{'activeNumDetail': activeButton === 4}">400:</li>
+        <li
+            (click)="changeDetails(parentalControl, 4)"
+            [ngClass]="{'activeDetail': activeButton === 4}">parental control</li>
+    </ul>
+    <ul>
+        <li [ngClass]="{'activeNumDetail': activeButton === 5}">500:</li>
+        <li
+            (click)="changeDetails(privatePolicy, 5)"
+            [ngClass]="{'activeDetail': activeButton === 5}">private policy</li>
+    </ul>
+    <ul>
+        <li [ngClass]="{'activeNumDetail': activeButton === 6}">600:</li>
+        <li
+            (click)="changeDetails(cookiePolicy, 6)"
+            [ngClass]="{'activeDetail': activeButton === 6}">Cookie policy</li>
+    </ul>
+    <ul>
+        <li [ngClass]="{'activeNumDetail': activeButton === 7}">700:</li>
+        <li
+            (click)="changeDetails(firstStart, 7)"
+            [ngClass]="{'activeDetail': activeButton === 7}">Start</li>
+    </ul>
+    <ul>
+        <li [ngClass]="{'activeNumDetail': activeButton === 8}">800:</li>
+        <li
+            (click)="changeDetails(credits, 8)"
+            [ngClass]="{'activeDetail': activeButton === 8}">Credits</li>
+    </ul>
+</div>
+<div id="settings-detail" [innerHTML]="details">{{details}}</div>
+<h4>buona visione</h4>

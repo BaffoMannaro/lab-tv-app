@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "icon";
+  src: url(../assets/fonts/iconlabtv.woff2), url(../assets/fonts/iconlabtv.woff), url(../assets/fonts/iconlabtv.ttf);
+}
+@font-face {
+  font-family: "televideo";
+  src: url(../assets/fonts/perfect_dos_vga_437_win.woff2), url(../assets/fonts/perfect_dos_vga_437_win.woff), url(../assets/fonts/perfect_dos_vga_437_win.ttf);
+}
+
+:host{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: 5vh 0;
+}

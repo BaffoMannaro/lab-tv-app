@@ -1,0 +1,9 @@
+:host{
+    height: 80vh;
+    width: var(--width-screen);
+    margin-right: 5vh;
+
+    background: #000;
+    border-radius: 2em;
+    border: 1em solid var(--colore-marrone);
+}

@@ -1,0 +1,61 @@
+<nav>
+    <ul id="menu">
+        <li id="menuHome">
+            <div class="menu-button">
+                <a
+                    (click)="toggleButtonActive(1)"
+                    [ngClass]="{'active': ButtonActive === 1}"
+                    routerLink="/home">
+                    a
+                </a>
+            </div>
+            <div class="menu-button-label">Home</div>
+        </li>
+        <li id="menuCatalogo">
+            <div class="menu-button">
+                <a
+                    (click)="toggleButtonActive(2)"
+                    [ngClass]="{'active': ButtonActive === 2}"
+                    routerLink="/catalog">
+                    b
+                </a>
+            </div>
+            <div class="menu-button-label">Catalogo</div>
+        </li>
+
+        <li id="menuLogin">
+            <div class="menu-button">
+                <a
+                    (click)="toggleButtonActive(3)"
+                    [ngClass]="{'active': ButtonActive === 3,
+                                'insite': isButtonInsite}"
+                    routerLink="/login">
+                    d
+                </a>
+            </div>
+            <div class="menu-button-label">Login</div>
+        </li>
+        <li id="menuContatti">
+            <div class="menu-button">
+                <a
+                    (click)="toggleButtonActive(4)"
+                    [ngClass]="{'active': ButtonActive === 4}"
+                    routerLink="/contacts">
+                    c
+                </a>
+            </div>
+            <div class="menu-button-label">Contatti</div>
+        </li>
+    </ul>
+    <ul id=nav-buttons>
+        <li id="yt"><a href="#">g</a></li>
+        <li id="ig"><a href="#">f</a></li>
+        <li id="fb"><a href="#">e</a></li>
+        <li
+            id="on-off"
+            [ngClass]="{'active': isOnOffActive}"
+            (click)="toggleOnOff()">
+            <a routerLink="/home">h</a>
+        </li>
+    </ul>
+</nav>

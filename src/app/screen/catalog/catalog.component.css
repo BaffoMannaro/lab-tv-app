@@ -1,0 +1,161 @@
+:host::-webkit-scrollbar {width: 12px;}
+:host::-webkit-scrollbar-track {
+  background-color: #c0c0c03c;
+  border-radius: 0 2em 2em 0;
+}
+:host::-webkit-scrollbar-thumb {
+  background-color: var(--color-dark-gray);
+  border-radius: 0 2em 2em 0;}
+:host::-ms-scrollbar {width: 12px;}
+:host::-ms-scrollbar-track {background-color: #c0c0c03c;}
+:host::-ms-scrollbar-thumb {
+  background-color: var(--color-dark-gray);
+  border-radius: 0 2em 2em 0;
+}
+
+.animate__animated.animate__flash{
+  --animate-duration: 4s;
+}
+
+:host{
+  height: 100%;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  padding: 3%;
+}
+*{font-family: televideo !important; text-transform: uppercase;}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #c0c0c03c;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.search-input {
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: #4d4d4d;
+  color: #ffffff;
+  width: 80%;
+  font-size: 16px;
+  padding: 8px;
+  margin-right: 10px;
+}
+
+.search-button {
+  background-color: var(--color-dark-gray);
+  color: #4d4d4d;
+  padding: 5px;
+  font-family: icon !important;
+  text-transform: lowercase;
+  font-size: 16px;
+  border-radius: .3em;
+
+  cursor: pointer;
+
+}
+
+.search-button:hover {
+  background-color: #ffff00;
+  color: #000;
+}
+
+div{
+  display: flex;
+  color: #fff;
+}
+
+div#popularMovie{
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+  padding-top: 30px;
+}
+div#popularMovie > div{
+  gap: 15px;
+  width: 80%;
+  justify-content: center;
+}
+div#popularMovie > div > div{
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+div#popularMovie > div > div > div{
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+div#popularMovie > div > div > div img{
+  width: calc(var(--width-img-carousel)*1.1);
+  height: var(--height-img-carousel);
+}
+div#popularMovie > div > div > div img.movie-image[data-index="0"],
+div#popularMovie > div > div > div img.movie-image[data-index="2"]{
+  width: calc(var(--width-img-carousel)*.8);
+  height: calc(var(--height-img-carousel)*.8);
+  opacity: .5;
+}
+div#popularMovie > div > div > div img.movie-image[data-index="1"]{padding: 5px;}
+div#popularMovie > div > div > div img.movie-image[data-index="1"]:hover{
+  outline: 2px solid #fff;
+  cursor: pointer;
+}
+
+
+div#popularMovie > div > div > div h3.movie-title[data-index="0"],
+div#popularMovie > div > div > div h3.movie-title[data-index="2"]{
+  width: calc(var(--width-img-carousel)*.8);
+  line-height: 1.5em;
+  font-size: 1em;
+  opacity: .5;
+}
+div#popularMovie > div > div > div h3.movie-title[data-index="1"]{
+  display: block;
+  width: var(--width-img-carousel);
+  font-size: 1.5em;
+}
+
+div#popularMovie > div > div > div p.movie-year[data-index="0"],
+div#popularMovie > div > div > div p.movie-year[data-index="2"]{
+  font-size: .8em;
+  opacity: .5;
+}
+div#popularMovie > div > div > div p.movie-year[data-index="1"]{
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+h3{
+  text-align: center;
+  display: block;
+  margin: 0;
+  margin-top: 20px;
+  width: 200px;
+  min-height: calc(var(--height-img-carousel)*.5);
+}
+
+button {
+  width: calc(var(--width-nav-bar)*0.16);
+  height: calc(var(--width-nav-bar)*0.16);
+  border-radius: .3em;
+  background-color:var(--color-dark-gray);
+
+  cursor: pointer;
+  font-family: icon !important;
+  text-transform: lowercase;
+}
+
+button:first-child{
+  rotate: 180deg;
+}
+
+button:hover{
+  background-color: var(--colore-bianco-sporco);
+}

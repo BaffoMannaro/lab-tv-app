@@ -1,0 +1,23 @@
+<div id="otherMovie" *ngIf="movieService.otherMovies">
+  <div id="otherSingleMovie">
+    <div id="otherSingleMovieDetail" *ngFor="let movie of movieService.otherMovies">
+      <a routerLink="/movie_detail" (click)="currentOtherMovie(movie.id)">
+        
+        <img
+        *ngIf="movie.poster_path === null"
+        src="../../../../assets/img/missing.jpg"
+        alt=""
+        class="otherMovie-image" >
+        <img
+        *ngIf="movie.poster_path !== null"
+        [src]="API_IMAGE_URL + movie.poster_path"
+        alt=""
+        class="otherMovie-image" >
+
+
+      </a>
+      <p class="otherMovie-title"> {{movie.title}} </p>
+    </div>
+
+  </div>
+</div>

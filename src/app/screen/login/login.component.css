@@ -1,0 +1,217 @@
+.active {
+    display: block !important;
+  }  
+
+ #login{
+    font-family: televideo !important;
+ }
+
+ #login > ol {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    text-transform: uppercase;
+    padding: 1%;
+  }
+   #login > ol > li:nth-of-type(1) {
+    width: 100%;
+    margin-bottom: 1%;
+    background-image: linear-gradient(blue 33.33%, black 33.33%, black 66.66%, blue 66.66%, blue 100%);
+  }
+   #login > ol > li:nth-of-type(1) h2 {
+    font-family: televideo;
+    font-size: 5em;
+    font-weight: 900;
+    line-height: 15vh;
+    height: 15vh;
+    text-align: center;
+    color: white;
+  }
+   #login > ol > li:nth-of-type(2) {
+    display: inline-block;
+    width: 45.5%;
+    height: 64vh;
+    padding: 2%;
+    vertical-align: top;
+    color: #000;
+  }
+   #login > ol > li:nth-of-type(2) ul {
+    height: 100%;
+    padding: 20% 0;
+  }
+   #login > ol > li:nth-of-type(2) ul li {
+    display: block;
+    position: relative;
+    width: 110%;
+    height: 20%;
+    margin-top: 15%;
+  }
+   #login > ol > li:nth-of-type(2) ul li p {
+    position: absolute;
+    text-align: left;
+    font-size: 1.5em;
+    top: 50%;
+    left: 40%;
+    translate: -50% -50%;
+  }
+   #login > ol > li:nth-of-type(2) ul li button {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    translate: 0 -50%;
+  }
+   #login > ol > li:nth-of-type(2) ul li:nth-of-type(1) {
+    background: white;
+    color: blue;
+    margin-bottom: 4%;
+  }
+   #login > ol > li:nth-of-type(2) ul li:nth-of-type(1) button {
+    background: white;
+    color: blue;
+    border: 1px solid blue;
+  }
+   #login > ol > li:nth-of-type(2) ul li:nth-of-type(1) button:hover {
+    background: blue;
+    color: white;
+    border: 0;
+  }
+   #login > ol > li:nth-of-type(2) ul li:nth-of-type(2) {
+    background: yellow;
+    color: black;
+  }
+   #login > ol > li:nth-of-type(2) ul li:nth-of-type(2) button {
+    background: yellow;
+    border: 1px solid black;
+    color: black;
+  }
+   #login > ol > li:nth-of-type(2) ul li:nth-of-type(2) button:hover {
+    background: black;
+    border: 0;
+    color: yellow;
+  }
+   #login > ol > li:nth-of-type(3) {
+    display: inline-block;
+    min-width: 47%;
+    margin-left: 7%;
+    height: 56vh;
+  }
+   #login > ol > li:nth-of-type(3) > ul {
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+  }
+   #login > ol > li:nth-of-type(3) > ul > li {
+    display: block;
+    height: 100%;
+    padding: 5% 20%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    text-align: center;
+    font-size: 1.5em;
+  }
+   #login > ol > li:nth-of-type(3) > ul > li form {
+    min-width: 300px;
+    margin: 0 auto;
+  }
+   #login > ol > li:nth-of-type(3) > ul > li label {
+    display: block;
+    font-size: 0.8em;
+  }
+   #login > ol > li:nth-of-type(3) > ul > li input {
+    height: 25px;
+  }
+   #login > ol > li:nth-of-type(3) > ul > li p {
+    padding: 3%;
+  }
+   li#utente {
+    width: 100%;
+    background: white;
+    color: black;
+    padding: 5% 0 !important;
+  }
+   li#utente a {
+    display: block;
+    margin-top: 5%;
+    text-decoration-color: blue;
+    font-size: 0.6em;
+  }
+   li#utente button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10%;
+    cursor: pointer;
+    background: blue;
+    color: white;
+    border: 0;
+  }
+   li#nuovoAccount {
+    width: 100%;
+    background: yellow;
+    color: black;
+    padding: 2% 0 !important;
+
+  }
+   li#nuovoAccount p:nth-of-type(4) div.errorBox {
+    padding-left: 5%;
+  }
+   li#nuovoAccount p:nth-of-type(5) {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 5%;
+  }
+   li#nuovoAccount p:nth-of-type(5) div.errorBox {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    translate: -50% 0;
+    width: 105%;
+  }
+   li#nuovoAccount input#privacy {
+    display: block;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    translate: 0 -50%;
+    cursor: pointer;
+  }
+   li#nuovoAccount label[for=privacy] {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    translate: 0 -50%;
+    text-align: left;
+    font-size: 0.5em;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+   li#nuovoAccount form button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10%;
+    cursor: pointer;
+    background: yellow;
+    border: 1px solid black;
+    color: black;
+  }
+   #login div.errorBox {
+    padding-left: 5%;
+  }
+   #login button {
+    display: block;
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    outline: 0;
+    background-blend-mode: multiply;
+    font-family: televideo;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  

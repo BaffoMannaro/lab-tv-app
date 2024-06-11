@@ -1,0 +1,250 @@
+:host::-webkit-scrollbar {width: 12px;}
+:host::-webkit-scrollbar-track {
+  background-color: #c0c0c03c;
+  border-radius: 0 2em 2em 0;
+}
+:host::-webkit-scrollbar-thumb {
+  background-color: var(--color-dark-gray);
+  border-radius: 0 2em 2em 0;}
+:host::-ms-scrollbar {width: 12px;}
+:host::-ms-scrollbar-track {background-color: #c0c0c03c;}
+:host::-ms-scrollbar-thumb {
+  background-color: var(--color-dark-gray);
+  border-radius: 0 2em 2em 0;
+}
+
+.animate__animated.animate__fadeInLeft{
+  --animate-duration: 3s;
+  --animate-delay: 2s;
+}
+
+:host{
+  height: 100%;
+  padding-bottom: 5%;
+  overflow-y: auto;
+  display: flex;
+  color: #fff;
+  flex-direction: column;
+  align-items: center;
+}
+
+*{font-family: televideo !important; text-transform: uppercase;}
+
+:host > div{
+  width: 100%;
+  height: 100%;
+  padding: 5%;
+  display: flex;
+  justify-content: space-around;
+}
+:host > div > img{
+  z-index: 10;
+  width: 40%;
+}
+
+div#vhs{
+  display: flex;
+}
+div#vhs > img{
+  width: 100%;
+}
+
+div#vhs ul{
+  display: block;
+  width: 47%;
+  height: 40%;
+  color: #000;
+  position: absolute;
+  top: 50%;
+  left: 56%;
+  translate: -56% -50%;
+  background-color: #fff;
+  border-radius: .5em;
+}
+
+div#vhs ul li{
+  padding-left: 10px;
+  border-bottom: 1px solid var(--colore-bianco-sporco);
+
+}
+div#vhs ul li:nth-child(1){
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 1.8em;
+  background-color: #ffff00;
+  border-radius: .3em .3em 0 0;
+}
+div#vhs ul li:nth-child(2){
+  padding-top: 5px;
+}
+div#vhs ul li:nth-child(3){
+  padding-top: 10px;
+  text-align: right;
+}
+
+div#movie-video{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0;
+}
+div#movie-video button{
+  width: 30%;
+  padding: 15px;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+div#movie-video button:hover{
+  background-color: var(--color-button-active);
+  color: #fff;
+}
+div#movie-video button#x{
+  background-color: var(--color-dark-gray);
+  color: #000;
+}
+div#movie-video button#x:hover{
+  background-color: #000;
+  color: #fff;
+}
+
+div#genres{
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 0;
+  padding-bottom: 3%;
+}
+div#genres p{
+  display: block;
+  padding: 10px;
+  border-radius: 1em;
+  background-color: #fff;
+  color: #000;
+}
+
+div#overview{
+  display: flex;
+  padding: 3% 12%;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-items: center;
+  gap: 8%;
+}
+div#overview p:first-child{
+  color: #ffff00;
+  font-size: 1.5em;
+
+}
+
+div#wrap-details{
+  display: flex;
+  height: auto;
+}
+
+div#details{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  gap: 5%;
+}
+
+div#more-cast{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(var(--width-screen)*0.85);
+  padding: 2% 5%;
+  background-color: #0000ff;
+}
+div#more-cast h3{
+  margin: 0;
+  font-size: 1.5em;
+}
+div#more-cast h3:last-child{
+  border: 1px solid #fff;
+  padding: 0 2%;
+}
+div#more-cast h3:last-child:hover{
+  color: #fff;
+  background-color: #000;
+  cursor: pointer;
+}
+
+div#cast{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 15px;
+  padding-top: 30px;
+}
+
+div#cast-img{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  max-width: 20%;
+  padding-bottom: 3%;
+}
+div#cast-img img{
+  width: 100%;
+}
+
+div#cast-info{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-wrap: wrap;
+
+}
+div#cast-info h4{
+  font-size: 1.2em;
+  margin: 0;
+  padding: 15px 0;
+}
+div#cast-info p.director{
+  font-size: 1.5em;
+  padding: 15px 0 5px 0;
+  color: #ffff00;
+  border-bottom: 1px solid var(--color-dark-gray);
+}
+div#cast-info p:last-child{
+  font-size: 1.2em;
+  color: #ffff00;
+}
+
+div#movie-similar{
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  gap: 15px;
+  width: calc(var(--width-screen)*0.85);
+  padding: 2% 5%;
+}
+div#movie-similar h3{
+  text-align: center;
+  color: #ffff00;
+  font-size: 1.5em;
+}
+div#movie-sim-detail{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 15px;
+}
+div#movie-sim-img{
+  width: 25%;
+}
+div#movie-sim-img img{
+  width: 100%;
+}
+div#movie-sim-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -1,0 +1,48 @@
+<div class="search-container">
+  <input
+    type="text"
+    class="search-input"
+    placeholder="Cerca un film"
+    name="searchKey"
+    [(ngModel)]="searchKey">
+  <button
+    class="search-button"
+    (click)="toggleIsSearch()"
+    (click)="searchMovie()" > k </button>
+</div>
+
+<div id="popularMovie" *ngIf="movieService.isSearch">
+
+  <button
+    (click)="changeMovie(1)">j
+  </button>
+
+  <div *ngIf="popularMovies && popularMovies.results">
+    <div *ngFor="let i of [0,1,2]">
+      <div *ngIf="popularMovies.results[indexMovie + i]">
+        <a routerLink="/movie_detail" (click)="currentMovie(indexMovie + i)">
+          <img
+          [src]= "API_IMAGE_URL + popularMovies.results[indexMovie+i].poster_path"
+          alt=""
+          class="movie-image"
+          [attr.data-index]= "i" >
+        </a>
+        <h3
+          class="movie-title"
+          [attr.data-index]= "i" > {{popularMovies.results[indexMovie + i].title}}
+        </h3>
+        <p
+          class="movie-year"
+          [attr.data-index]= "i" > {{popularMovies.results[indexMovie + i].release_date}}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <button
+    (click)="changeMovie(2)">j
+  </button>
+
+</div>
+
+<app-movie-list></app-movie-list>

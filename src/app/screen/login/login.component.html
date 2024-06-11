@@ -1,0 +1,62 @@
+<section id="login">
+    <ol>
+        <li>
+            <h2>Login/Registrazione</h2>
+        </li>
+        <li>
+            <ul>
+                <li>
+                    <p>Sei un utente registrato?</p>
+                    <button *ngIf="isActive" (click)="toggleIsActive()">clicca qui</button>
+                </li>
+                <li>
+                    <p>Vuoi creare un nuovo account?</p>
+                    <button *ngIf="!isActive" (click)="toggleIsActive()">clicca qui</button>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <ul>
+                <li id="utente" *ngIf="!isActive">
+                    <form name="utente">
+                        <p>
+                            <label for="emailUtente">Email</label>
+                            <input type="text" id="emailUtente" name="emailUtente">
+                        </p>
+                        <p>
+                            <label for="passwordUtente">Password</label>
+                            <input type="password" id="passwordUtente" name="passwordUtente">
+                        </p>
+                        <a href="#">Hai dimenticato la password?</a>
+                        <button type="submit">Accedi</button>
+                    </form>
+                </li>
+                <li id="nuovoAccount" *ngIf="isActive">
+                    <form name="nuovoAccount">
+                        <p>
+                            <label for="newName">Nickname</label>
+                            <input type="text" id="newName" name="newName">
+                        </p>
+                        <p>
+                            <label for="newEmail">Email</label>
+                            <input type="text" id="newEmail" name="newEmail">
+                        </p>
+                        <p>
+                            <label for="passwordNew">Password</label>
+                            <input type="password" id="passwordNew" name="passwordNew">
+                        </p>
+                        <p>
+                            <label for="passwordNewR">Ripeti password</label>
+                            <input type="password" id="passwordNewR" name="passwordNewR">
+                        </p>
+                        <p>
+                            <input type="checkbox" id="privacy" name="privacy" value="privacy">
+                           <label for="privacy">Accetta l'informativa sulla privacy</label>
+                        </p>
+                        <button type="submit">Accedi</button>
+                    </form>
+                </li>
+            </ul>
+        </li>
+    </ol>
+</section>

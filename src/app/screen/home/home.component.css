@@ -1,0 +1,126 @@
+*{
+    color: #fff;
+    font-family: televideo !important;
+    text-transform: uppercase;
+}
+
+:host{
+    display: grid;
+    height: 100%;
+    grid-template-areas:
+    "welcome    welcome     welcome     welcome"
+    "labtv      intro       intro       intro"
+    "settings   settings    details     details"
+    "outro      outro       outro       outro"
+    ;
+    gap: 1%;
+    grid-template-rows: 20% 20% 45% 12%;
+    padding: 1%;
+}
+
+h2{
+    grid-area: welcome;
+    background-image: var(--color-gradient);
+    color: #ffff00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8em;
+    padding-top: .1em;
+}
+
+h3{
+    grid-area: labtv;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4em;
+    padding: 0 1em;
+}
+
+div#intro{
+    grid-area: intro;
+    background-color: var(--color-green);
+    padding: 1em;
+}
+div#intro > p{
+    color: #000;
+    font-size: 1.4em;
+}
+div#intro div{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+
+}
+div#intro div > p{
+    color: #0000ff;
+    font-size: 1em;
+}
+
+div#settings{
+    grid-area: settings;
+    padding: .5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+div#settings ul{
+    display: flex;
+    font-size: 1.5em;
+    text-indent: .5em;
+    width: 120%;
+}
+div#settings ul li:first-child{
+    line-height: 2em;
+    padding-right: 2em;
+    text-indent: 1em;
+}
+div#settings ul li:last-child{
+    width: 100%;
+    line-height: 2em;
+    color: var(--color-green);
+    cursor: pointer;
+}
+div#settings ul#new-releases li:first-child{color: #ffff00;}
+
+.activeDetail{
+    width: 150%;
+    background-color: #fff;
+    color: #0000ff !important;
+}
+.activeNumDetail{ color: var(--color-green); }
+
+div#settings ul:hover li:first-child{color: var(--color-green);}
+div#settings ul:hover li:last-child{
+    background-color: #fff;
+    color: #0000ff;
+}
+
+div#settings ul#new-releases{width: 100%;}
+div#settings ul#new-releases li:last-child{
+    color: #0000ff;
+    background-color: #ffff00;
+    padding: 0;
+    text-align: center;
+}
+
+div#settings-detail{
+    grid-area: details;
+    min-width: 350px;
+    background-color: #fff;
+    color: #000;
+    font-size: 1.5em;
+    padding: 5%;
+}
+
+h4{
+    grid-area: outro;    
+    background-color: #ffff00;
+    color: #000;
+    font-size: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

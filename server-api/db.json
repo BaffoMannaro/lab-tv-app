@@ -1,0 +1,15 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "email": "admin@gmail.com",
+      "password": "admin"
+    }
+  ],
+  "movies-purchased": [
+    {
+      "id": 0
+    }
+  ]
+}

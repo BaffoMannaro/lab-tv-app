@@ -1,0 +1,104 @@
+<div>
+  <img [src]= "API_IMAGE_URL + selectedMovie.poster_path" alt="">
+  <div id="vhs" class="animate__animated animate__fadeInLeft">
+    <img
+      src="../../../../assets/img/vhs-h.svg"
+      alt="" >
+    <ul>
+      <li>{{selectedMovie.title}}</li>
+      <li>{{selectedMovie.release_date}}</li>
+      <li>{{selectedMovie.runtime}} minuti</li>
+    </ul>
+  </div>
+</div>
+
+<div id="movie-video" *ngIf="movieTrailer.results.length > 0">
+  <button *ngIf="!isVideoOk" (click)="toggleVideo()">guarda il trailer</button>
+  <button id="x" *ngIf="isVideoOk" (click)="toggleVideo()">x  chiudi</button>
+  <iframe
+  *ngIf="isVideoOk"
+  width="560"
+  height="315"
+  [src]="getSafeVideoUrl()"
+  frameborder="0"
+  allowfullscreen>
+  </iframe>
+</div>
+
+<p>{{selectedMovie.tagline}}</p>
+
+<div id="overview" *ngIf="selectedMovie.overview">
+  <p>trama:</p>
+  <p>{{selectedMovie.overview}}</p>
+</div>
+
+<div id="genres">
+  <p *ngFor="let genre of selectedMovie.genres">{{genre.name}}</p>
+</div>
+
+<div id="wrap-details">
+  <div id="details">
+    <div id="more-cast">
+      <h3>lista del cast:</h3>
+      <h3 (click)="toggleCastVisible()">Mostra</h3>
+    </div>
+  
+    <div id="cast" *ngIf="isCastVisible">
+      <div id="cast-img" *ngFor="let crewMember of movieCast">
+        <img
+          [src]="API_IMAGE_URL + crewMember.profile_path"
+          alt="">
+        <img
+          *ngIf="crewMember.profile_path === null && crewMember.gender === 2"
+          src="../../../../assets/img/cover-male.jpg"
+          alt="">
+        <img
+          *ngIf="crewMember.profile_path === null && crewMember.gender === 1"
+          src="../../../../assets/img/cover-female.jpg"
+          alt="">
+        <img
+          *ngIf="crewMember.profile_path === null && crewMember.gender === 0"
+          src="../../../../assets/img/cover-und.jpg"
+          alt="">
+  
+  
+        <div id="cast-info">
+          <p *ngIf="crewMember.job === 'Director'" class="director">Regista</p>
+          <h4>{{crewMember.name}}</h4>
+          <span *ngIf="crewMember.job !== 'Director'">nei panni di:</span>
+          <p >{{crewMember.character}}</p>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+</div>
+
+
+<div id="movie-similar">
+    <h3>potrebbero piacerti anche questi film</h3>
+
+  <div id="movie-sim-detail">
+    <div
+      id="movie-sim-img"
+      *ngFor="let i of [0,1,2,3,4,5]">
+
+        <img
+          *ngIf="movieSimilar.results[i].poster_path === null"
+          src="../../../../assets/img/missing.jpg"
+          alt="">
+        <img
+        *ngIf="movieSimilar.results[i].poster_path !== null"
+          [src]="API_IMAGE_URL + movieSimilar.results[i].poster_path"
+          alt="">
+
+      <div id="movie-sim-info">
+        <h4>{{movieSimilar.results[i].title}}</h4>
+        <p >{{movieSimilar.results[i].release_date}}</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+

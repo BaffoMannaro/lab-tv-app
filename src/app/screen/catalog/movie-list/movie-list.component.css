@@ -1,0 +1,34 @@
+*{font-family: televideo !important; text-transform: uppercase;}
+
+:host{
+  color: #fff;
+  display: flex;
+  margin-top: 10%;
+}
+
+div#otherMovie{
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  gap: 15px;
+  height: auto;
+  padding: 0 5%;
+}
+div#otherSingleMovie{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 15px;
+}
+div#otherSingleMovieDetail{
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+div#otherSingleMovieDetail a, div#otherSingleMovieDetail p{
+  width: 100%
+}
+div#otherSingleMovieDetail img{
+  width: 100%;
+}

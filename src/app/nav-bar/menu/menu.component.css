@@ -1,0 +1,133 @@
+.active{
+  background: var(--color-button-active) !important;
+  color: #fff !important;
+}
+
+nav{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: var(--width-nav-bar);
+  height: var(--height-nav-bar);
+  background: var(--colore-bianco-sporco);
+  border: 5px solid var(--colore-marrone);
+  border-radius: 2em;
+}
+
+ul#menu{
+  border-radius: 1em;
+  background-color: var(--color-dark-gray);
+  box-shadow: inset 0 0 0.3em var(--color-shadow);
+
+  width: calc(var(--width-nav-bar)*0.8);
+  height: var(--width-nav-bar);
+  margin: calc(var(--width-nav-bar)*0.1) 0;
+  padding: calc(var(--width-nav-bar)*0.05) 0;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+div.menu-button a{
+  width: calc(var(--width-nav-bar)*0.16);
+  height: calc(var(--width-nav-bar)*0.16);
+  margin-left: calc(var(--width-nav-bar)*0.05);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+  color: #000;
+  font-family: icon;
+  font-size: 1em;
+  border-radius: .3em;
+  background-color:var(--colore-bianco-sporco);
+  box-shadow: 0.15em 0.15em 0.05em var(--color-shadow);
+
+}
+
+div.menu-button a:hover{
+  color: #fff;
+  background-color: var(--color-button-active);
+}
+
+div.menu-button-label{
+  width: calc(var(--width-nav-bar)*0.35);
+  height: calc(var(--height-nav-bar)*0.1);
+  line-height: calc(var(--height-nav-bar)*0.1);
+  margin-right: calc(var(--width-nav-bar)*0.05);
+  border-radius: .3em;
+
+  font-family: monospace;
+  text-transform: uppercase;
+  background-color: #fff;
+  padding-left: .5em;
+}
+
+li[id*="menu"]{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+ul#nav-buttons{
+  display: grid;
+  grid-template-areas: 
+  "yt   on-off"
+  "ig   on-off"
+  "fb   on-off";
+  gap: calc(var(--width-nav-bar)*0.05);
+
+  width: calc(var(--width-nav-bar)*0.8);
+  height: calc(var(--width-nav-bar)*0.4);
+  margin-bottom: calc(var(--width-nav-bar)*0.1);
+
+}
+
+ul#nav-buttons li{
+  border-radius: .5em;
+  background: var(--color-dark-gray);
+  text-align: center;
+  height: calc(var(--width-nav-bar)*0.1);;
+  line-height: calc(var(--width-nav-bar)*0.1);
+  box-shadow: 0.15em 0.15em 0.05em var(--color-shadow);
+}
+
+ul#nav-buttons li a{
+  display: block;
+  text-decoration: none;
+  font-family: icon;
+  color: #000;
+}
+
+ul#nav-buttons li:hover{
+  background: #fff;
+}
+
+li#yt{grid-area: yt}
+
+li#ig{grid-area: ig}
+
+li#fb{grid-area: fb}
+
+ul#nav-buttons li#on-off{
+  grid-area: on-off;
+  background: #000;
+  text-align: center;
+  height: calc(var(--width-nav-bar)*0.4);
+  line-height: calc(var(--width-nav-bar)*0.4);
+}
+
+ul#nav-buttons li#on-off a{
+  color: #fff;
+  display: block;
+}
+
+ul#nav-buttons li#on-off a:hover{
+  background: var(--color-button-active);
+  border-radius: .3em;
+}

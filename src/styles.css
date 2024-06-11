@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+  --img-background: url("./assets/img/background.webp");
+  --img-logo: url(./assets/img/logo-bn.webp);
+  --colore-bianco-sporco: #cecbc6;
+  --colore-marrone: #6f4e25;
+  --color-dark-gray: #8c8c8c;
+  --color-shadow: #050412;
+  --color-button-active: #db226a;
+  --color-green: #00ff00;
+  --color-gradient: linear-gradient(blue 33.33%, black 33.33%, black 66.66%, blue 66.66%, blue 100%);
+  --width-screen: calc(80vh*1.33);
+  --width-nav-bar: 250px;
+  --height-nav-bar: calc(var(--width-nav-bar)*1.7);
+  --width-img-carousel: 220px;
+  --height-img-carousel: calc(var(--width-img-carousel*1.76)); 
+}
+
+/* Personalizzazione scrollbar simil windows'98*/
+:host::-webkit-scrollbar {width: 12px;}
+:host::-webkit-scrollbar-track {background-color: #c0c0c03c;}
+:host::-webkit-scrollbar-thumb {background-color: #808080;}
+:host::-ms-scrollbar {width: 12px;}
+:host::-ms-scrollbar-track {background-color: #c0c0c03c;}
+:host::-ms-scrollbar-thumb {background-color: #808080;}
+
+
+*{box-sizing: border-box;}
+
+ol, ul,h2, h3, h4, h5, h6{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: var(--img-background);
+  background-size: cover;
+  margin: 5vh auto;
+  max-width: 1600px;
+  height: 90vh;
+}
