@@ -9,11 +9,12 @@ import { Cast, MovieCredits } from '../../../movie-credits.model';
 import { MovieSimilar } from '../../../movie-similar.model';
 import { MovieTrailer } from '../../../movie-trailer.model';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-movie-detail',
   standalone: true,
-  imports: [CommonModule,CatalogComponent,],
+  imports: [CommonModule,CatalogComponent,RouterLink],
   templateUrl: './movie-detail.component.html',
   styleUrl: './movie-detail.component.css'
 })
